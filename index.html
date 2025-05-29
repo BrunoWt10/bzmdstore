@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A BzMD Store aproxima o esporte da juventude das comunidades. Vista-se como uma lenda!" />
+  <meta name="keywords" content="BZMD Store, roupas esportivas, comunidade, loja, futebol, EAFC25, esportivo" />
+  <title>BzMD Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(10,15,44,0.6), rgba(10,15,44,0.6)),
+        url('https://i.pinimg.com/736x/e8/5c/e3/e85ce3847db62be956643085cd86d1f1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      background-color: #0a0f2c;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #FFFFFF; /* agora branco */
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      width: 160px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 8px white);
+    }
+
+    #clock {
+      font-family: 'Orbitron', monospace;
+      font-size: 42px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .slogan {
+      font-size: 18px;
+      margin: 10px 0;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .btn {
+      background-color: #00bfa6;
+      color: #0a0f2c;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-item img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .social-item a {
+      color: #FFFFFF; /* agora branco */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-item a:hover {
+      text-decoration: underline;
+    }
+
+    .rastreamento {
+      margin-top: 30px;
+      animation: piscar 1s infinite alternate;
+      font-size: 20px;
+    }
+
+    @keyframes piscar {
+      0% {opacity: 0.3;}
+      100% {opacity: 1;}
+    }
+
+    .produtos-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .produto {
+      background-color: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 200px;
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produto h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 20px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .produtos-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #clock {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#rastreamento">Rastreio</a>
+    <a href="#sobre">Sobre a loja</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <header id="inicio">
+    <img src="https://i.imgur.com/z2uVuWe.png" alt="Logo da BzMD Store" />
+    <div id="clock"></div>
+    <div class="slogan">Vista-se e jogue como a lenda! ⚽🔥</div>
+  </header>
+
+  <section class="section" id="sobre">
+    <h2>Sobre a BzMD Store 🧢👕</h2>
+    <p>
+      A BzMD Store foi criada com o propósito de aproximar o esporte da juventude das comunidades e também alcançar pessoas de fora delas. Trabalhamos com roupas esportivas importadas, estilo e paixão em cada detalhe. Aqui você se veste como um campeão e vive o jogo como uma lenda! 💥
+    </p>
+  </section>
+
+  <section class="section" id="inspiracao">
+    <h2>Inspiração do dia ✨</h2>
+    <p id="mensagem">Clique no botão para se inspirar! 🙌</p>
+    <button class="btn" onclick="mostrarMensagem()">Mostrar mensagem</button>
+  </section>
+
+  <section class="section" id="produtos">
+    <h2>Produtos em Destaque 🏆</h2>
+    <div class="produtos-container">
+      <div class="produto">
+        <img src="https://via.placeholder.com/200x200.png?text=Produto+1" alt="Camisa esportiva preta" />
+        <h3>Camisa Esportiva</h3>
+        <p>Modelo performance dry fit.</p>
+        <button class="btn">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/200x200.png?text=Produto+2" alt="Bermuda de treino azul" />
+        <h3>Bermuda de Treino</h3>
+        <p>Confortável e leve para o dia a dia.</p>
+        <button class="btn">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rastreamento" id="rastreamento">
+    📦 Código de rastreio: BZMD-2341XZ-⚡ Em trânsito...
+  </section>
+
+  <section class="section" id="contato">
+    <h2>Contato 📱</h2>
+    <div class="social">
+      <div class="social-item">
+        <img src="https://i.imgur.com/DEh47cA.png" alt="Logo WhatsApp" />
+        <a href="https://wa.me/message/3KTSGI45X5E3C1" target="_blank">WhatsApp da loja</a>
+      </div>
+      <div class="social-item">
+        <img src="https://i.imgur.com/4v6Bn4l.png" alt="Logo Instagram" />
+        <a href="https://instagram.com/bzmdstore21" target="_blank">Instagram da loja</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  &copy; 2025 BzMD Store — Todos os direitos reservados.<br />
+  <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> | 
+  <a href="termos-de-servico.html" target="_blank" rel="noopener noreferrer">Termos de Serviço</a>
+</footer>
+
+
+  <script>
+    const mensagens = [
+      "Vista-se como campeão. Jogue como lenda. 🏆",
+      "Acredite na jornada. Respeite o processo. 🚀",
+      "Você é maior que qualquer obstáculo. 💪",
+      "Seja o exemplo que você queria ver. 🌟",
+      "Coragem é vestir o manto mesmo com medo. 👊",
+      "Vista-se com propósito, jogue com alma. ❤️",
+    ];
+
+    function mostrarMensagem() {
+      const index = Math.floor(Math.random() * mensagens.length);
+      document.getElementById("mensagem").textContent = mensagens[index];
+    }
+
+    function atualizarRelogio() {
+      const agora = new Date();
+      const horas = String(agora.getHours()).padStart(2, "0");
+      const minutos = String(agora.getMinutes()).padStart(2, "0");
+      const segundos = String(agora.getSeconds()).padStart(2, "0");
+      document.getElementById("clock").textContent = `🕒 ${horas}:${minutos}:${segundos}`;
+    }
+
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+  </script>
+</body>
+</html>
